@@ -8,4 +8,8 @@ public class Energy extends Physics {
         return mass * getGravity() * height;
     }
 
+    public static double momentum(double mass, double velocity){
+        return multiply(mass, velocity);
+    }
+
 }

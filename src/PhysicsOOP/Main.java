@@ -11,6 +11,7 @@ public class Main {
         System.out.println("Select what formulae you wish to calculate on");
         System.out.println("For Kinetic Energy, press 1");
         System.out.println("For Potential Energy, press 2");
+        System.out.println("For Momentum, press 3");
 
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
@@ -30,6 +31,13 @@ public class Main {
                 System.out.println("Input Height = ");
                 double height = sc.nextDouble();
                 System.out.println(Energy.potentialEnergy(mass, height));
+                break;
+            case 3:
+                System.out.println("Input Mass = ");
+                mass = sc.nextDouble();
+                System.out.println("Input Velocity = ");
+                velocity = sc.nextDouble();
+                System.out.println(Energy.momentum(mass, velocity));
                 break;
 
         }

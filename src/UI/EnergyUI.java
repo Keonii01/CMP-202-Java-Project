@@ -9,6 +9,7 @@ public class EnergyUI {
     JFrame frame = new JFrame("PhysicsUI Calc");
     JButton kineticEnergyBtn = new JButton("Kinetic Energy");
     JButton potentialEnergyBtn = new JButton("Potential Energy");
+    JButton momentumBtn = new JButton("Momentum");
 
     public void MainUI() {
         kineticEnergyBtn.addActionListener(new ActionListener() {
@@ -25,8 +26,16 @@ public class EnergyUI {
             }
         });
 
+        momentumBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                drawmomentumUI();
+            }
+        });
+
         frame.add(kineticEnergyBtn);
         frame.add(potentialEnergyBtn);
+        frame.add(momentumBtn);
         frame.setSize(200, 400);
         frame.setLayout(new FlowLayout());
         frame.setVisible(true);
@@ -101,6 +110,36 @@ public class EnergyUI {
         });
 
         potentialEnergyFrame.setVisible(true);
+    }
+
+    JFrame momentumFrame = new JFrame("Momentum");
+    JLabel massLabel3 = new JLabel("Enter Mass (kg):");
+    JLabel velocityLabel2 = new JLabel("Enter Velocity (m/s):");
+    JTextField massTextField3 = new JTextField();
+    JTextField velocityTextField2 = new JTextField();
+    JButton calculatemomentumBtn = new JButton("Calculate");
+
+    public void drawmomentumUI() {
+        Energy myObj = new Energy();
+        momentumFrame.setLayout(new GridLayout(3, 2));
+        momentumFrame.setSize(300, 150);
+        momentumFrame.add(massLabel3);
+        momentumFrame.add(massTextField3);
+        momentumFrame.add(velocityLabel2);
+        momentumFrame.add(velocityTextField2);
+        momentumFrame.add(calculatemomentumBtn);
+
+        calculatemomentumBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double mass = Float.parseFloat(massTextField3.getText());
+                double velocity = Float.parseFloat(velocityTextField2.getText());
+                double result = myObj.momentum(mass, velocity);
+                JOptionPane.showMessageDialog(null, "Momentum = " + result + "kgm/s");
+            }
+        });
+
+        momentumFrame.setVisible(true);
     }
 }
 
