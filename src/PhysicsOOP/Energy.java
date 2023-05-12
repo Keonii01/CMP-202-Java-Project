@@ -4,4 +4,8 @@ public class Energy extends Physics {
         return 0.5 * mass * raypow(velocity);
     }
 
+    public static double potentialEnergy(double mass, double height){
+        return mass * getGravity() * height;
+    }
+
 }

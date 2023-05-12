@@ -8,6 +8,7 @@ import PhysicsOOP.Energy;
 public class EnergyUI {
     JFrame frame = new JFrame("PhysicsUI Calc");
     JButton kineticEnergyBtn = new JButton("Kinetic Energy");
+    JButton potentialEnergyBtn = new JButton("Potential Energy");
 
     public void MainUI() {
         kineticEnergyBtn.addActionListener(new ActionListener() {
@@ -17,7 +18,15 @@ public class EnergyUI {
             }
         });
 
+        potentialEnergyBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                drawPotentialEnergyUI();
+            }
+        });
+
         frame.add(kineticEnergyBtn);
+        frame.add(potentialEnergyBtn);
         frame.setSize(200, 400);
         frame.setLayout(new FlowLayout());
         frame.setVisible(true);
@@ -58,6 +67,40 @@ public class EnergyUI {
         });
 
         kineticEnergyFrame.setVisible(true);
+    }
+
+    JFrame potentialEnergyFrame = new JFrame("Potential Energy");
+    JLabel massLabel2 = new JLabel("Enter mass (kg):");
+    JLabel heightLabel = new JLabel("Enter height (m):");
+    JTextField massTextField2 = new JTextField();
+    JTextField heightTextField = new JTextField();
+    JButton calculatePotentialEnergyBtn = new JButton("Calculate");
+
+    public void drawPotentialEnergyUI() {
+        Energy myObj = new Energy();
+        potentialEnergyFrame.setLayout(new GridLayout(3, 2));
+        potentialEnergyFrame.setSize(300, 150);
+        potentialEnergyFrame.add(massLabel2);
+        potentialEnergyFrame.add(massTextField2);
+        potentialEnergyFrame.add(heightLabel);
+        potentialEnergyFrame.add(heightTextField);
+        potentialEnergyFrame.add(calculatePotentialEnergyBtn);
+
+        calculatePotentialEnergyBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    double mass = Float.parseFloat(massTextField2.getText());
+                    double height = Float.parseFloat(heightTextField.getText());
+                    double result = myObj.potentialEnergy(mass, height);
+                    JOptionPane.showMessageDialog(null, "Potential Energy = " + result + "J");
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Invalid input. Please enter valid numbers.");
+                }
+            }
+        });
+
+        potentialEnergyFrame.setVisible(true);
     }
 }
 
