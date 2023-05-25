@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33ef091d-1f7f-496a-8c14-80c124a231a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Divine.iml" afterDir="false" />
+    <list default="true" id="33ef091d-1f7f-496a-8c14-80c124a231a3" name="Changes" comment="group work">
+      <change beforePath="$PROJECT_DIR$/src/Divine/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMP202/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +44,7 @@
     <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="20" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Divine.main" />
+      <option name="MAIN_CLASS_NAME" value="CMP202.main" />
       <module name="Divine" />
       <extension name="coverage">
         <pattern>
@@ -76,6 +71,43 @@
       <option name="presentableId" value="Default" />
       <updated>1685050714962</updated>
     </task>
+    <task id="LOCAL-00001" summary="group work">
+      <created>1685055075691</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685055075691</updated>
+    </task>
+    <task id="LOCAL-00002" summary="group work">
+      <created>1685055210428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685055210428</updated>
+    </task>
+    <task id="LOCAL-00003" summary="group work">
+      <created>1685055735934</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685055735934</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="group work" />
+    <option name="LAST_COMMIT_MESSAGE" value="group work" />
   </component>
 </project>
